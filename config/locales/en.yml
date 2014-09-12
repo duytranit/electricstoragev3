@@ -20,14 +20,3 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  activerecord:
-    models:
-      user:
-
-    attributes:
-      user:
-
-  views:
-    user:
-      sign_up: Sign up
-      sign_in: Sign in
