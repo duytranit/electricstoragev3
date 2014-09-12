@@ -1,3 +1,18 @@
 #user_nav {
   text-align: center;
 }
+
+#languages-choosing-table{
+  width: 100%;
+  text-align: center;
+
+  td{
+    font-size: 10px;
+  }
+
+  td:hover{
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+  }
+}

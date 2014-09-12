@@ -19,7 +19,7 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+vi:
   activerecord:
     models:
       user:
@@ -29,5 +29,5 @@ en:
 
   views:
     user:
-      sign_up: Sign up
-      sign_in: Sign in
+      sign_up: Đăng ký
+      sign_in: Đăng nhập
