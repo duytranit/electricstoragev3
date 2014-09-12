@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="419780358">
+  <component name="DataSourceManagerImpl" format="xml" hash="718407238">
     <data-source source="LOCAL" name="Rails electricstoragev3: development" uuid="8a29a81e-5040-43a4-bf00-169a1686a6b8">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
