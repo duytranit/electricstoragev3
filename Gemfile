@@ -39,3 +39,4 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'haml-rails'
 gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'
