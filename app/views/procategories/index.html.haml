@@ -1,0 +1,4 @@
+- if user_signed_in? && current_user.is_staff?
+  = render partial: 'staff_index'
+- else
+  = render partial: 'customer_index'

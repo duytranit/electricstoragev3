@@ -1,0 +1,12 @@
+#menu
+  %ul
+    - project_flag = 'active' if controller_path == 'projects'
+    %li{class: project_flag}
+      = link_to t("activerecord.models.project"), projects_path
+    - procategory_flag = 'active' if controller_path == 'procategories'
+    %li{class: procategory_flag}
+      = link_to t("activerecord.models.procategory"), procategories_path
+    %li
+      %a{:href => "http://www.free-css.com/"} About Me
+    %li
+      %a{:href => "http://www.free-css.com/"} Contact Me

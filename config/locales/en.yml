@@ -24,6 +24,7 @@ en:
     models:
       user: User
       project: Project
+      procategory: Category
 
     attributes:
       user:
@@ -44,6 +45,10 @@ en:
       projects_list: Projects list
       projects_description: includes all your projects which was created before and related detail information were updated until %{now} and approved by Administrator
       projects_count: Projects count
+    procategory:
+      procategories_list: Categories list
+      procategories_description: includes all project categories have been existing on system and approved by Administrator until %{now}
+      procategories_count: Categories count
 
     sign_up: Sign up
     sign_in: Sign in

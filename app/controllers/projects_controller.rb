@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = current_user.active_projects.page(params[:page]).per(20)
+    @projects = current_user.active_projects.page(params[:page]).per(20) if user_signed_in? && current_user.is_staff?
   end
 
   # GET /projects/1
