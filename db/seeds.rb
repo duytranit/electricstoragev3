@@ -21,9 +21,14 @@ customer = User.create(
 )
 
 (1..100).each do |item|
-  staff.projects.create(
+  procategory = Procategory.create(
+    name: 'Category ' + item.to_s,
+    status: true
+  )
+  procategory.projects.create(
       title: 'Project '+item.to_s,
       description: 'Description of project '+item.to_s,
+      user: staff,
       status: true
   )
 end
