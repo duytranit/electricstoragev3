@@ -42,7 +42,7 @@ en:
       need_password: we need your current password to confirm your changes
     project:
       projects_list: Projects list
-      projects_description: <p>Project description<p>
+      projects_description: includes all your projects which was created before and related detail information were updated until %{now} and approved by Administrator
       projects_count: Projects count
 
     sign_up: Sign up
@@ -50,3 +50,4 @@ en:
     logout: Log out
     edit: Edit
     home: Home
+    number: N.o

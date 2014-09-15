@@ -25,3 +25,29 @@
 .sigin-alert{
   margin-top: 20px;
 }
+
+.projects-table {
+  width: 100%;
+  th {
+    height: 40px;
+    background: #EFF0EB url(../assets/img2.gif) repeat-x;
+  }
+  .number{
+    width: 10%;
+    text-align: center;
+  }
+  .body {
+    width: 90%;
+  }
+  .list_line_odd{
+    background: #D0D0D0;
+  }
+  .list_line_even{
+    background: #F0F0F0;
+  }
+}
+
+.pagination{
+  margin-top: 20px;
+  text-align: right;
+}

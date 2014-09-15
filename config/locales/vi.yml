@@ -51,6 +51,14 @@ vi:
     logout: Đăng xuất
     edit: Chỉnh sửa
     home: Trang chủ
+    number: STT
+
+    pagination:
+      first: "&laquo; Trang đầu"
+      last: "Trang cuối &raquo;"
+      previous: "&lsaquo; Quay lại"
+      next: "Sang trang &rsaquo;"
+      truncate: "&hellip;"
 
   activeadmin:
     dashboard: Dashboard

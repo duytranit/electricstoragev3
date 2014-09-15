@@ -14,3 +14,24 @@
     %p
       = t("views.project.projects_count")+': '
       = current_user.active_projects.count
+
+%table.projects-table
+  %thead
+    %tr
+      %th.number
+        = t("views.number")
+      %th.body
+        = t("activerecord.models.project")
+  %tbody
+    - if params[:page] && Integer(params[:page]) > 1
+      - flag = (Integer(params[:page]) - 1) *20 + 1
+    - else
+      - flag = 1
+    - @projects.each do |project|
+      %tr{class: cycle('list_line_odd', 'list_line_even')}
+        %td.number
+          = flag
+          - flag+= 1
+        %td.body
+          = project.title
+= paginate @projects
