@@ -22,17 +22,24 @@
 vi:
   activerecord:
     models:
-      user:
+      user: Tài khoản
 
     attributes:
       user:
+        email: Email
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+        remember_me: Ghi nhớ
 
   views:
     user:
-      sign_up: Đăng ký
-      sign_in: Đăng nhập
-      editor_profile: Chỉnh sửa
-      logout: Đăng xuất
+      editor_profile: Chỉnh sửa Tài Khoản
+      forgot_password: Quên mật khẩu
+    sign_up: Đăng ký
+    sign_in: Đăng nhập
+    logout: Đăng xuất
+    home: Trang chủ
+    project: Dự án
 
   devise:
     confirmations:
