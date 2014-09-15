@@ -23,6 +23,7 @@ vi:
   activerecord:
     models:
       user: Tài khoản
+      project: Dự án
 
     attributes:
       user:
@@ -39,12 +40,17 @@ vi:
       staff: Nhân viên
       leave_blank: bỏ trống nếu bạn không muốn thay đổi mật khẩu
       need_password: chúng tôi cần mật khẩu hiện tại của bạn để xác nhận thay đổi
+    project:
+      projects_list: Danh sách dự án
+      projects_description: bao gồm tất cả các dự án đã được bạn tạo ra trước và các thông tin liên quan được cập nhật đến ngày %{now} đã được duyệt bởi Người Quản Trị
+      projects_count: Tổng số dự án
+
+
     sign_up: Đăng ký
     sign_in: Đăng nhập
     logout: Đăng xuất
     edit: Chỉnh sửa
     home: Trang chủ
-    project: Dự án
 
   activeadmin:
     dashboard: Dashboard

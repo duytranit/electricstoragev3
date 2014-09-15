@@ -1,0 +1,16 @@
+.post
+  %h2.title
+    = t("views.project.projects_list")
+  %h3.posted
+    = format_date(DateTime.now)
+  .story
+    %p
+      %img{:alt => "", :height => "140", :src => "../assets/projects.jpg", :width => "470"}/
+    %p
+      %strong
+        = t("views.project.projects_list")
+      = t("views.project.projects_description", now: format_date(DateTime.now))
+  .meta
+    %p
+      = t("views.project.projects_count")+': '
+      = current_user.active_projects.count

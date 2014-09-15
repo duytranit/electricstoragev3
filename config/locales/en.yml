@@ -23,6 +23,7 @@ en:
   activerecord:
     models:
       user: User
+      project: Project
 
     attributes:
       user:
@@ -39,9 +40,13 @@ en:
       staff: Staff
       leave_blank: leave blank if you don't want to change it
       need_password: we need your current password to confirm your changes
+    project:
+      projects_list: Projects list
+      projects_description: <p>Project description<p>
+      projects_count: Projects count
+
     sign_up: Sign up
     sign_in: Sign in
     logout: Log out
     edit: Edit
     home: Home
-    project: Project
