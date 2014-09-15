@@ -28,15 +28,20 @@ en:
       user:
         email: Email
         password: Password
-        password_confirmation: Password Confirmation
+        password_confirmation: Password confirmation
+        current_password: Current password
         remember_me: Remember me
 
   views:
     user:
-      editor_profile: Editor Profile
       forgot_password: Forgot password
+      customer: Customer
+      staff: Staff
+      leave_blank: leave blank if you don't want to change it
+      need_password: we need your current password to confirm your changes
     sign_up: Sign up
     sign_in: Sign in
     logout: Log out
+    edit: Edit
     home: Home
     project: Project

@@ -12,6 +12,19 @@
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
+  <div>
+    <% ['customer', 'staff'].each do |role| %>
+      <td style="width: 50%">
+        <%= f.radio_button(:role, role) %>
+        <% if role=='customer' %>
+            <%= t("views.user.customer") %>
+        <% else %>
+            <%= t("views.user.staff") %>
+        <% end %>
+      </td>
+    <% end %>
+  </div>
+
   <div><%= f.submit t("views.sign_up") %></div>
 <% end %>
 

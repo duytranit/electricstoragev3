@@ -29,15 +29,20 @@ vi:
         email: Email
         password: Mật khẩu
         password_confirmation: Xác nhận mật khẩu
+        current_password: Mật khẩu đang dùng
         remember_me: Ghi nhớ
 
   views:
     user:
-      editor_profile: Chỉnh sửa Tài Khoản
       forgot_password: Quên mật khẩu
+      customer: Khách hàng
+      staff: Nhân viên
+      leave_blank: bỏ trống nếu bạn không muốn thay đổi mật khẩu
+      need_password: chúng tôi cần mật khẩu hiện tại của bạn để xác nhận thay đổi
     sign_up: Đăng ký
     sign_in: Đăng nhập
     logout: Đăng xuất
+    edit: Chỉnh sửa
     home: Trang chủ
     project: Dự án
 
