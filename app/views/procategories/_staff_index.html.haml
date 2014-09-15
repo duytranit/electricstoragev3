@@ -13,7 +13,7 @@
   .meta
     %p
       = t("views.procategory.procategories_count")+': '
-      = @procategories.count
+      = Procategory.all.count
 
 %table.projects-table
   %thead
