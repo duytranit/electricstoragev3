@@ -4,7 +4,7 @@ class ProcategoriesController < ApplicationController
   # GET /procategories
   # GET /procategories.json
   def index
-    @procategories = Procategory.all.page(params[:page]).per(20)
+	  @procategories = Procategory.where(["status = ? AND SUBSTR(ddc,2,1) = ?", true, '0']).page(params[:page]).per(20)
   end
 
   # GET /procategories/1
