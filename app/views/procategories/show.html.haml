@@ -1,18 +1,4 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @procategory.name
-%p
-  %b Description:
-  = @procategory.description
-%p
-  %b Ddc:
-  = @procategory.ddc
-%p
-  %b Status:
-  = @procategory.status
-
-= link_to 'Edit', edit_procategory_path(@procategory)
-\|
-= link_to 'Back', procategories_path
+- if user_signed_in? && current_user.is_staff?
+  = render partial: 'staff_show'
+- else
+  = render partial: 'customer_show'

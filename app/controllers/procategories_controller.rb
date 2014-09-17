@@ -4,12 +4,15 @@ class ProcategoriesController < ApplicationController
   # GET /procategories
   # GET /procategories.json
   def index
-	  @procategories = Procategory.where(["status = ? AND SUBSTR(ddc,2,1) = ?", true, '0']).page(params[:page]).per(20)
+		# @procategories = Procategory.all.page(params[:page]).per(20)
+	  @procategories = procategories_follow_ddc_level(0).page(params[:page]).per(20)
   end
 
   # GET /procategories/1
   # GET /procategories/1.json
   def show
+		# @procategories = active_procategories_follow_ddc_level(@procategory.level)
+		@procategories = paginate(@procategory.cousin)
   end
 
   # GET /procategories/new
@@ -71,4 +74,13 @@ class ProcategoriesController < ApplicationController
   def project_params
     params.require(:procategory).permit(:name, :description, :ddc, :status)
   end
+
+  def procategories_follow_ddc_level(level)
+	  level += 2
+	  return Procategory.where(["SUBSTR(ddc,?,1) = ?", level, '0'])
+  end
+
+	def paginate(procategories)
+		return procategories.page(params[:page]).per(20)
+	end
 end
