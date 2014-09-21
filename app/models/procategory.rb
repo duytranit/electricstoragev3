@@ -36,7 +36,12 @@ class Procategory < ActiveRecord::Base
 
 	def cousin
 		level = self.level
-		level += 2
-		return Procategory.where(["SUBSTR(ddc,?,1) = ?", level, '0'])
+    if level == 0
+      return Procategory.where(["SUBSTR(ddc,?,1) = ?", level + 2, '0'])
+    else
+      father = self.father
+      return Procategory.where(["SUBSTR(ddc,?,1) = ? AND SUBSTR(ddc,1,?) = ? AND SUBSTR(ddc,?,1) != ?", level + 2, '0', level, self.ddc[0..(level - 1)], level + 1, father.ddc[level]])
+    end
+
 	end
 end
