@@ -39,5 +39,7 @@
 
   - @father = @procategory.father
   - if @father && @father.children.count < 9
+    %h2
+      = t("views.procategory.new_procategory")
     - @procategory = Procategory.new
     = render partial: 'form'

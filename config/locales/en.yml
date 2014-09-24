@@ -54,6 +54,7 @@ en:
       procategories_list: Categories list
       procategories_description: includes all project categories have been existing on system and approved by Administrator until %{now}
       procategories_count: Categories count
+      new_procategory: New project category
 
     sign_up: Sign up
     sign_in: Sign in

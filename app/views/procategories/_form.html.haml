@@ -6,11 +6,10 @@
         - @procategory.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :description
-    = f.text_area :description
+    .label
+      = f.label :name
+    .content
+      = f.text_field :name
   .field
     - array = Array.new
     - prefix_ddc = @father.prefix_ddc
@@ -19,10 +18,14 @@
       - ddc += '0' if ddc.length < 3
       - procategory = Procategory.find_by_ddc(ddc)
       - array << ddc if procategory.nil?
-    = f.label :ddc
-    = f.select :ddc, array
+    .label
+      = f.label :ddc
+    .content
+      = f.select :ddc, array
   .field
-    = f.label :status
-    = f.check_box :status
+    .label
+      = f.label :description
+    .content
+      = f.text_area :description
   .actions
     = f.submit 'Save'

@@ -54,6 +54,7 @@ vi:
       procategories_list: Danh sách thể loại dự án
       procategories_description: bao gồm tất cả các thể loại hiện có trong hệ thống và đã được kiểm duyệt bởi Quản Trị Viên được cập nhật đến ngày %{now}
       procategories_count: Tổng số thể loại
+      new_procategory: Thể loại dự án mới
 
 
     sign_up: Đăng ký
