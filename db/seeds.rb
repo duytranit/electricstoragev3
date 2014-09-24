@@ -81,11 +81,11 @@ Procategory.create(
 		ddc: '020',
 		status: true
 )
-Procategory.create(
-		name: 'Bách khoa thư & sách sự kiện',
-		ddc: '030',
-		status: true
-)
+# Procategory.create(
+# 		name: 'Bách khoa thư & sách sự kiện',
+# 		ddc: '030',
+# 		status: true
+# )
 Procategory.create(
 		name: 'Không phân định',
 		ddc: '040',
@@ -96,11 +96,11 @@ Procategory.create(
 		ddc: '050',
 		status: true
 )
-Procategory.create(
-		name: 'Các hiệp hội, tổ chức & bảo tàng',
-		ddc: '060',
-		status: true
-)
+# Procategory.create(
+# 		name: 'Các hiệp hội, tổ chức & bảo tàng',
+# 		ddc: '060',
+# 		status: true
+# )
 Procategory.create(
 		name: 'Truyền thông tin tức, nghề làm báo & xuất bản',
 		ddc: '070',
@@ -111,11 +111,11 @@ Procategory.create(
 		ddc: '080',
 		status: true
 )
-Procategory.create(
-		name: 'Bản viết tay & sách quý hiếm',
-		ddc: '090',
-		status: true
-)
+# Procategory.create(
+# 		name: 'Bản viết tay & sách quý hiếm',
+# 		ddc: '090',
+# 		status: true
+# )
 Procategory.create(
 		name: 'Siêu hình học',
 		ddc: '110',

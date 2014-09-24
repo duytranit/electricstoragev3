@@ -35,4 +35,9 @@
             %li
               = link_to(child.ddc + ' - ' + child.name, child)
 
-= paginate @procategories
+      = paginate @procategories
+
+  - @father = @procategory.father
+  - if @father && @father.children.count < 9
+    - @procategory = Procategory.new
+    = render partial: 'form'

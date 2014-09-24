@@ -33,6 +33,11 @@ en:
         password_confirmation: Password confirmation
         current_password: Current password
         remember_me: Remember me
+      procategory:
+        name: Name
+        description: Description
+        ddc: DDC
+        status: Status
 
   views:
     user:
@@ -56,3 +61,4 @@ en:
     edit: Edit
     home: Home
     number: N.o
+    new: New

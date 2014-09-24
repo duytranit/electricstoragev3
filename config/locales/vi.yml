@@ -33,6 +33,11 @@ vi:
         password_confirmation: Xác nhận mật khẩu
         current_password: Mật khẩu đang dùng
         remember_me: Ghi nhớ
+      procategory:
+        name: Tên
+        description: Miêu tả
+        ddc: DDC
+        status: Trạng thái
 
   views:
     user:
@@ -57,6 +62,7 @@ vi:
     edit: Chỉnh sửa
     home: Trang chủ
     number: STT
+    new: Tạo mới
 
     pagination:
       first: "&laquo; Trang đầu"

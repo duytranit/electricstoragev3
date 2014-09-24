@@ -5,7 +5,6 @@
       %ul
         - @procategory.errors.full_messages.each do |msg|
           %li= msg
-
   .field
     = f.label :name
     = f.text_field :name
@@ -13,8 +12,15 @@
     = f.label :description
     = f.text_area :description
   .field
+    - array = Array.new
+    - prefix_ddc = @father.prefix_ddc
+    - (1..9).each do |item|
+      - ddc = prefix_ddc + item.to_s
+      - ddc += '0' if ddc.length < 3
+      - procategory = Procategory.find_by_ddc(ddc)
+      - array << ddc if procategory.nil?
     = f.label :ddc
-    = f.text_field :ddc
+    = f.select :ddc, array
   .field
     = f.label :status
     = f.check_box :status
