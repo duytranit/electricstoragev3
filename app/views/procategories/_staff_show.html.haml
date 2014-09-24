@@ -14,6 +14,17 @@
     %p
       = t("views.procategory.procategories_count")+': '
       = Procategory.all.count
+= link_to '...', procategories_path
+- father = @procategory.father
+- father_array = Array.new
+- while father
+  - father_array << father
+  - father = father.father
+- father_array.each do |pc|
+  >>
+  = link_to pc.name, pc
+>>
+= link_to @procategory.name, @procategory
 %ul
   - @procategories.each do |pc|
     %li

@@ -4,8 +4,8 @@ class ProcategoriesController < ApplicationController
   # GET /procategories
   # GET /procategories.json
   def index
-		# @procategories = Procategory.all.page(params[:page]).per(20)
-	  @procategories = procategories_follow_ddc_level(0).page(params[:page]).per(20)
+		procategory = Procategory.first.initial_procategory
+    @procategories = paginate(procategory.cousin)
   end
 
   # GET /procategories/1
@@ -73,11 +73,6 @@ class ProcategoriesController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def project_params
     params.require(:procategory).permit(:name, :description, :ddc, :status)
-  end
-
-  def procategories_follow_ddc_level(level)
-	  level += 2
-	  return Procategory.where(["SUBSTR(ddc,?,1) = ?", level, '0'])
   end
 
 	def paginate(procategories)

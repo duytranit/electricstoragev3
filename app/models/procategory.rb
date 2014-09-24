@@ -42,6 +42,14 @@ class Procategory < ActiveRecord::Base
       father = self.father
       return Procategory.where(["SUBSTR(ddc,?,1) = ? AND SUBSTR(ddc,1,?) = ? AND SUBSTR(ddc,?,1) != ?", level + 2, '0', level, self.ddc[0..(level - 1)], level + 1, father.ddc[level]])
     end
+  end
 
-	end
+  def initial_procategory
+    return Procategory.where(["SUBSTR(ddc,2,1) = '0'"]).order(ddc: :asc).first
+  end
+
+  # def find_father_at_level(father_level)
+  #   return Procategory.where(["SUBSTR(ddc,1,?) = ? AND SUBSTR(ddc,?,1) = '0'", father_level + 1, self.ddc[0..(father_level)], father_level + 2 ]).first
+  # end
+
 end
