@@ -11,17 +11,10 @@
     .content
       = f.text_field :name
   .field
-    - array = Array.new
-    - prefix_ddc = @father.prefix_ddc
-    - (1..9).each do |item|
-      - ddc = prefix_ddc + item.to_s
-      - ddc += '0' if ddc.length < 3
-      - procategory = Procategory.find_by_ddc(ddc)
-      - array << ddc if procategory.nil?
     .label
       = f.label :ddc
     .content
-      = f.select :ddc, array
+      = f.select :ddc, @father.variable_ddcs
   .field
     .label
       = f.label :description

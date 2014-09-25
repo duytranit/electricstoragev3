@@ -4,7 +4,7 @@ class ProcategoriesController < ApplicationController
   # GET /procategories
   # GET /procategories.json
   def index
-		procategory = Procategory.first.initial_procategory
+		procategory = Procategory.all.order(ddc: :asc).first
     @procategories = paginate(procategory.cousin)
   end
 

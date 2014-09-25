@@ -72,13 +72,80 @@ Procategory.create(
 		status: true
 )
 Procategory.create(
+		name: 'Đời sống trí tuệ',
+    ddc: '001.1',
+    status: true
+)
+Procategory.create(
+		name: 'Học vấn và học tập',
+    ddc: '001.2',
+    status: true
+)
+Procategory.create(
+		name: 'Khoa học nhân văn',
+    ddc: '001.3',
+    status: true
+)
+Procategory.create(
+		name: 'Nghiên cứu; phương pháp thống kê',
+    ddc: '001.4',
+    status: true
+)
+Procategory.create(
+		name: 'Tri thức còn tranh luận',
+    ddc: '001.9',
+    status: true
+)
+Procategory.create(
+		name: 'Tri thức',
+    ddc: '001',
+    description: 'Bao gồm cả lịch sử, mô tả, đánh giá phê phán hoạt động trí tuệ nói chung; gia tăng, biến đổi
+thông tin và kiến thức; tác phẩm liên ngành về người tư vấn. Xếp vào đây bàn luận về các ý tưởng trong nhiều
+lĩnh vực. Xếp tri thức luận vào 121. Xếp biên tập kiến thức dưới một hình thức cụ thể theo hình thức đó, vd.,
+bách khoa thư 030. Về người tư vấn hoặc sử dụng người tư vấn trong một chủ đề cụ thể, xem chủ đề đó, vd.,
+dịch vụ tư vấn y học 362.17, sử dụng người tư vấn trong quản lý 658.4. Xem phần hướng dẫn ở 500 so với 001',
+    status: true
+)
+Procategory.create(
+		name: 'Sách',
+    ddc: '002',
+    status: true
+)
+Procategory.create(
+		name: 'Hệ thống',
+		ddc: '003',
+		status: true
+)
+Procategory.create(
+		name: 'Xử lý dữ liệu - Tin học',
+		ddc: '004',
+		status: true
+)
+Procategory.create(
+		name: 'Lập trình máy tính, chương trình, dữ liệu',
+		ddc: '005',
+		status: true
+)
+Procategory.create(
+		name: 'Các phương pháp tin học đặc biệt',
+		ddc: '006',
+		status: true
+)
+Procategory.create(
 		name: 'Thư mục học',
 		ddc: '010',
+		description: 'Lịch sử, nhận dạng, mô tả các tài liệu in, viết, nghe nhin, điện tử.
+Bao gồm cả việc chuẩn bị và biên soạn thư mục. Xếp biên mục mô tả vào 025.3.
+Xếp chuẩn bị và biên soạn một loại thư mục cụ thể vào loại đó, cộng thêm ký hiệu 028 từ Bảng 1,
+vd., chuẩn bị và biên soạn các thư mục tiểu sử 012.028; xếp mục lục và danh mục các tác phẩm nghệ thuật
+theo chủ đề, cộng thêm ký hiệu 074 từ Bảng 1, vd., mục lục tài liệu in 769.074.
+Về thư mục lịch sử, xem 002. Xem thêm 028.1 về tài liệu tổng quan.',
 		status: true
 )
 Procategory.create(
 		name: 'Thư viện học & Thông tin học',
 		ddc: '020',
+		description: '',
 		status: true
 )
 # Procategory.create(

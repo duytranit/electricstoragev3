@@ -25,6 +25,8 @@
   = link_to pc.name, pc
 >>
 = @procategory.name
+.procategory_description
+  = @procategory.description
 %ul
   - @procategories.each do |pc|
     %li
@@ -39,7 +41,7 @@
       = paginate @procategories
 
   - @father = @procategory.father
-  - if @father && @father.children.count < 9
+  - if @father && @father.variable_ddcs.count > 0
     %h2
       = t("views.procategory.new_procategory")
     - @procategory = Procategory.new
