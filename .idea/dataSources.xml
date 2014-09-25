@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="715898769">
+    <data-source source="LOCAL" name="Rails electricstoragev3: development" uuid="bf4967d7-3914-4a49-9cff-0e8b72838dea">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/electricstoragev3_dev</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>df9bdf98df99df9bdf98df99df9bdf98df99</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails electricstoragev3: test" uuid="9105263b-0413-443b-90a4-b02f4c0b48df">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/electricstoragev3_test</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>df9bdf98df99df9bdf98df99df9bdf98df99</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails electricstoragev3: production" uuid="e760fb64-1036-464a-bf91-1becf38da398">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/electricstoragev3_production</jdbc-url>
+      <user-name>electricstoragev3</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfefdfe6dfefdfe9dffedff8dfe3dfe9dff9dffedfe5dff8dfebdfeddfefdffcdf99dff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

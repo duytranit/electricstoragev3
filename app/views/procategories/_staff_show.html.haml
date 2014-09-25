@@ -24,17 +24,18 @@
   >>
   = link_to pc.name, pc
 >>
-= link_to @procategory.name, @procategory
+= @procategory.name
 %ul
   - @procategories.each do |pc|
     %li
-      = link_to(pc.ddc + ' - ' + pc.name, pc)
       - if pc.id == @procategory.id
+        = pc.ddc + ' - ' + pc.name
         %ul
           - pc.children.each do |child|
             %li
               = link_to(child.ddc + ' - ' + child.name, child)
-
+      - else
+        = link_to(pc.ddc + ' - ' + pc.name, pc)
       = paginate @procategories
 
   - @father = @procategory.father

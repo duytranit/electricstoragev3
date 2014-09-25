@@ -71,7 +71,7 @@ class ProcategoriesController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def project_params
+  def procategory_params
     params.require(:procategory).permit(:name, :description, :ddc, :status)
   end
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails electricstoragev3: development" uuid="bf4967d7-3914-4a49-9cff-0e8b72838dea">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails electricstoragev3: test" uuid="9105263b-0413-443b-90a4-b02f4c0b48df">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails electricstoragev3: production" uuid="e760fb64-1036-464a-bf91-1becf38da398">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

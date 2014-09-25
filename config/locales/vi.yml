@@ -64,6 +64,7 @@ vi:
     home: Trang chủ
     number: STT
     new: Tạo mới
+    save: Lưu
 
     pagination:
       first: "&laquo; Trang đầu"

@@ -16,7 +16,7 @@ class Procategory < ActiveRecord::Base
   end
 
 	def children
-		return Procategory.where(["DDC != ? AND SUBSTR(ddc,1,?) = ?", self.ddc, self.prefix_ddc.length, self.prefix_ddc])
+		return Procategory.where(["DDC != ? AND SUBSTR(ddc,1,?) = ?", self.ddc, self.prefix_ddc.length, self.prefix_ddc]).order(ddc: :asc)
 	end
 
 	def father
@@ -37,10 +37,10 @@ class Procategory < ActiveRecord::Base
 	def cousin
 		level = self.level
     if level == 0
-      return Procategory.where(["SUBSTR(ddc,?,1) = ?", level + 2, '0'])
+      return Procategory.where(["SUBSTR(ddc,?,1) = ?", level + 2, '0']).order(ddc: :asc)
     else
       father = self.father
-      return Procategory.where(["SUBSTR(ddc,?,1) = ? AND SUBSTR(ddc,1,?) = ? AND SUBSTR(ddc,?,1) != ?", level + 2, '0', level, self.ddc[0..(level - 1)], level + 1, father.ddc[level]])
+      return Procategory.where(["SUBSTR(ddc,?,1) = ? AND SUBSTR(ddc,1,?) = ? AND SUBSTR(ddc,?,1) != ?", level + 2, '0', level, self.ddc[0..(level - 1)], level + 1, father.ddc[level]]).order(ddc: :asc)
     end
   end
 
