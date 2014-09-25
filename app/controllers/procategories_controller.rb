@@ -12,7 +12,8 @@ class ProcategoriesController < ApplicationController
   # GET /procategories/1.json
   def show
 		# @procategories = active_procategories_follow_ddc_level(@procategory.level)
-		@procategories = paginate(@procategory.cousin)
+		# @procategories = paginate(@procategory.cousin)
+    @procategories = @procategory.cousin
   end
 
   # GET /procategories/new

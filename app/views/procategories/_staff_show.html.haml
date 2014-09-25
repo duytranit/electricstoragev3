@@ -38,7 +38,6 @@
               = link_to(child.ddc + ' - ' + child.name, child)
       - else
         = link_to(pc.ddc + ' - ' + pc.name, pc)
-      = paginate @procategories
 
   - @father = @procategory.father
   - if @father && @father.variable_ddcs.count > 0

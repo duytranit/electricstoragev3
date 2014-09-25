@@ -17,7 +17,17 @@ class Procategory < ActiveRecord::Base
   end
 
 	def children
-		return Procategory.where(["ddc != ? AND SUBSTR(ddc,1,?) = ?", self.ddc, self.prefix_ddc.length, self.prefix_ddc]).order(ddc: :asc)
+    case self.level
+    when 0
+      return Procategory.where(["SUBSTR(ddc,1,?) = ? AND ddc != ? AND (( SUBSTR(ddc,2,1) = '0' AND SUBSTR(ddc,3,1) != '0' AND SUBSTR(ddc,4,1) = '' ) OR ( SUBSTR(ddc,2,1) != '0' AND SUBSTR(ddc,3,1)  = '0' ))", self.prefix_ddc.length, self.prefix_ddc, self.ddc]).order(ddc: :asc)
+    when 1
+      return Procategory.where(["SUBSTR(ddc,1,2) = ? AND SUBSTR(ddc,3,1) != '0' AND SUBSTR(ddc,4,1) = ''", self.prefix_ddc]).order(ddc: :asc)
+    when 2
+      return Procategory.where(["SUBSTR(ddc,1,3) = ? AND SUBSTR(ddc,4,1) = '.' AND SUBSTR(ddc,5,1) != '0' AND SUBSTR(ddc,6,1) = ''", self.prefix_ddc])
+    # else
+    #   # return Procategory.where(["SUBSTR(ddc,1,?) = ? AND ddc != ? AND SUBSTR(ddc,?,1)=''", self.prefix_ddc.length, self.prefix_ddc, self.ddc, self.prefix_ddc.length + 2])
+    #   return Procategory.first
+    end
 	end
 
 	def father
