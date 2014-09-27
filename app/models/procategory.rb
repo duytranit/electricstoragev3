@@ -97,7 +97,17 @@ class Procategory < ActiveRecord::Base
 			array << ddc if procategory.nil?
 		end
 		return array
-	end
+  end
+
+  def family_tree
+    father = self.father
+    father_array = Array.new
+    while father
+      father_array << father
+      father = father.father
+    end
+    return father_array
+  end
 
   # def initial_procategory
   #   return Procategory.all.order(ddc: :asc).first

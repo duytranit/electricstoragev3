@@ -15,14 +15,12 @@
       = t("views.procategory.procategories_count")+': '
       = Procategory.all.count
 = link_to '...', procategories_path
-- father = @procategory.father
-- father_array = Array.new
-- while father
-  - father_array << father
-  - father = father.father
-- father_array.each do |pc|
+- number = @procategory.family_tree.count - 1
+- while number >= 0
   >>
+  - pc = @procategory.family_tree[number]
   = link_to pc.name, pc
+  - number -= 1
 >>
 = @procategory.name
 .procategory_description
