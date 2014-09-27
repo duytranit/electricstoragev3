@@ -24,19 +24,25 @@ class Procategory < ActiveRecord::Base
       return Procategory.where(["SUBSTR(ddc,1,2) = ? AND SUBSTR(ddc,3,1) != '0' AND SUBSTR(ddc,4,1) = ''", self.prefix_ddc]).order(ddc: :asc)
     when 2
       return Procategory.where(["SUBSTR(ddc,1,3) = ? AND SUBSTR(ddc,4,1) = '.' AND SUBSTR(ddc,5,1) != '0' AND SUBSTR(ddc,6,1) = ''", self.prefix_ddc])
-    # else
-    #   # return Procategory.where(["SUBSTR(ddc,1,?) = ? AND ddc != ? AND SUBSTR(ddc,?,1)=''", self.prefix_ddc.length, self.prefix_ddc, self.ddc, self.prefix_ddc.length + 2])
+    else
+      return Procategory.where(["SUBSTR(ddc,1,?) = ? AND ddc != ? AND SUBSTR(ddc,?,1)=''", self.prefix_ddc.length, self.prefix_ddc, self.ddc, self.prefix_ddc.length + 2])
     #   return Procategory.first
     end
 	end
 
 	def father
-		prefix_ddc = self.prefix_ddc
-		father_prefix_ddc = prefix_ddc[0..(prefix_ddc.length-2)]
+    prefix_ddc = self.prefix_ddc
+
+    if self.level == 4
+      father_prefix_ddc = prefix_ddc[0..(prefix_ddc.length-3)]
+    else
+      father_prefix_ddc = prefix_ddc[0..(prefix_ddc.length-2)]
+    end
+
 		if prefix_ddc.length == 1
 			return nil
 		else
-			procateogry = Procategory.where(["SUBSTR(ddc,1,?) = ?", father_prefix_ddc.length,prefix_ddc[0..(prefix_ddc.length-2)]]).order(ddc: :asc).first
+			procateogry = Procategory.where(["SUBSTR(ddc,1,?) = ?", father_prefix_ddc.length,father_prefix_ddc]).order(ddc: :asc).first
 			if procateogry
 				return procateogry
 			else
