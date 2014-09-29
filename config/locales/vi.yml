@@ -38,6 +38,11 @@ vi:
         description: Miêu tả
         ddc: DDC
         status: Trạng thái
+      project:
+        title: Tên
+        description: Miêu tả
+        procategory_id: Thể loại
+        photo: Hình ảnh
 
   views:
     user:

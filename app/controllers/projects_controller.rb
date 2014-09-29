@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = current_user.active_projects.page(params[:page]).per(20) if user_signed_in? && current_user.is_staff?
+    @projects = current_user.projects.page(params[:page]).per(20) if user_signed_in? && current_user.is_staff?
   end
 
   # GET /projects/1
@@ -25,6 +25,7 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
+    @project.user = current_user
 
     respond_to do |format|
       if @project.save
@@ -69,6 +70,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :description)
+      params.require(:project).permit(:title, :description, :procategory_id, :user_id, :photo)
     end
 end

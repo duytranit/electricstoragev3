@@ -5,12 +5,25 @@
       %ul
         - @project.errors.full_messages.each do |msg|
           %li= msg
-
   .field
-    = f.label :title
-    = f.text_field :title
+    .label
+      = f.label :procategory_id
+    .content
+      = f.select :procategory_id, options_for_select(Procategory.all.order(:ddc).map{|c| [truncate(c.full_name, length: 50), c.id]})
   .field
-    = f.label :description
-    = f.text_area :description
+    .label
+      = f.label :title
+    .content
+      = f.text_field :title
+  .field
+    .label
+      = f.label :description
+    .content
+      = f.text_area :description
+  .field
+    .label
+      = f.label :photo
+    .content
+      = f.file_field :photo
   .actions
     = f.submit 'Save'

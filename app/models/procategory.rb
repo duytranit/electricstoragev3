@@ -76,7 +76,7 @@ class Procategory < ActiveRecord::Base
 				array << (ddc + item.to_s + '0')
 			end
 		else
-			if level = 2
+			if level == 2
 				(1..9).each do |item|
 					array << (ddc + '.' + item.to_s)
 				end
@@ -107,6 +107,11 @@ class Procategory < ActiveRecord::Base
       father = father.father
     end
     return father_array
+  end
+
+  def full_name
+    name = self.ddc + ' - ' + self.name
+    return name
   end
 
   # def initial_procategory

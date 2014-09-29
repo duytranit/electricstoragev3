@@ -38,6 +38,11 @@ en:
         description: Description
         ddc: DDC
         status: Status
+      project:
+        title: Title
+        description: Description
+        procategory_id: Category
+        photo: Photo
 
   views:
     user:
