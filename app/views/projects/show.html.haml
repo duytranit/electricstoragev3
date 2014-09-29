@@ -1,11 +1,7 @@
-%p#notice= notice
-
-%p
-  %b Title:
-  = @project.title
-%p
-  %b Description:
-  = @project.description
+- if user_signed_in? && current_user.is_staff?
+  = render partial: 'staff_show'
+- else
+  = render partial: 'customer_show'
 
 = link_to 'Edit', edit_project_path(@project)
 \|

@@ -33,6 +33,6 @@
           = flag
           - flag+= 1
         %td.body
-          = project.title
+          = link_to project.title, project
 = paginate @projects
 = link_to t("views.new"), new_project_path

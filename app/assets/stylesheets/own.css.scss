@@ -61,7 +61,7 @@
   }
 }
 
-.new_project{
+#new_project{
   .field{
     .label{
       width: 100px;
@@ -70,7 +70,20 @@
   }
 }
 
+#new_attachment{
+  #project{
+    visibility: hidden;
+  }
+}
+
 .procategory_description{
   margin-top: 10px;
   font-style: italic;
+}
+
+.story{
+  img{
+    width: 470px;
+    height: 140px;
+  }
 }

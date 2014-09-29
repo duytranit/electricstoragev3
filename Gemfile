@@ -41,4 +41,5 @@ gem 'haml-rails'
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'kaminari'
-gem "paperclip", "~> 3.5.3"
+gem "paperclip", '~> 3.5.4'
+# gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"

@@ -1,0 +1,35 @@
+.post
+  %h2.title
+    = @project.title
+  %h3.posted
+    = format_date(@project.created_at).to_s + ' by ' + @project.user.email
+  .story
+    %p
+      = image_tag @project.photo.url(:medium)
+    %p
+      %em
+        %strong Baron's Blog
+      is a free template from
+      %strong Free CSS Templates
+      released under a
+      = succeed "." do
+        %a{:href => "http://creativecommons.org/licenses/by/2.5/"} Creative Commons Attribution 2.5 License
+  .meta
+    %p
+      Filed under
+      %a.category{:href => "http://www.free-css.com/"} Uncategorized
+      |
+      %a.comment{:href => "http://www.free-css.com/"} 1 Comment »
+.post
+  %h2.title Attached Files
+  %h3.posted Posted on January 1st, 2007 by Author
+  .story
+    - @project.attachments.each do |at|
+      %p= at.file_file_name
+  = render "/attachments/form"
+  .meta
+    %p
+      Filed under
+      %a.category{:href => "http://www.free-css.com/"} Uncategorized
+      |
+      %a.comment{:href => "http://www.free-css.com/"} 1 Comment »

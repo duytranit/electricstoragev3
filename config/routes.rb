@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :attachments
+
   resources :procategories
 
   devise_for :admin_users, ActiveAdmin::Devise.config
