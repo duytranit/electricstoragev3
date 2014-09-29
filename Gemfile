@@ -41,4 +41,4 @@ gem 'haml-rails'
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'kaminari'
-gem 'paperclip'
+gem "paperclip", "~> 3.5.3"
