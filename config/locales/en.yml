@@ -74,3 +74,6 @@ en:
     save: Save
     destroy: Destroy
     confirm: Are you sure ?
+    save_uploading: Upload
+    errors_from_saving: Error from saving progressing
+    back: Back

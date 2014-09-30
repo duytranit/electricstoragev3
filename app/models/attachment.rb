@@ -6,4 +6,5 @@ class Attachment < ActiveRecord::Base
 	                                                      'text/plain',
 	                                                      'application/msword',
 	                                                      'application/vnd.openxmlformats-officedocument.wordprocessingml.document']}
+	validates :file, presence: true
 end

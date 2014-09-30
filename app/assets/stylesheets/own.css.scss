@@ -74,6 +74,13 @@
   #project{
     visibility: hidden;
   }
+  #uploading{
+    float: left;
+    .field_with_errors{
+      float: left;
+      margin-right: 10px;
+    }
+  }
 }
 
 .procategory_description{
@@ -102,4 +109,9 @@
     width: 100%;
     text-align: right;
   }
+}
+
+.footer_buttons{
+  margin-top: 20px;
+  text-align: right;
 }

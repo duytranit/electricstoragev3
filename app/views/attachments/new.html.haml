@@ -1,5 +1,8 @@
-%h1 New attachment
+%h1
+  = t("activerecord.models.attachment")
 
 = render 'form'
 
-= link_to 'Back', attachments_path
+.footer_buttons
+  <<
+  = link_to t("views.back"), @attachment.project

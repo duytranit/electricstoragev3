@@ -44,6 +44,15 @@ vi:
         description: Miêu tả
         procategory_id: Thể loại
         photo: Hình ảnh
+      attachment:
+        file: Tệp
+    errors:
+      format: ! '%{attribute} %{message}'
+      models:
+        attachment:
+          attributes:
+            file:
+              blank: chưa được chọn
 
   views:
     user:
@@ -75,6 +84,9 @@ vi:
     save: Lưu
     destroy: Xóa
     confirm: Bạn có chắc không ?
+    save_uploading: Tải lên
+    errors_from_saving: Lỗi trong quá trình lưu
+    back: Quay lại
 
     pagination:
       first: "&laquo; Trang đầu"

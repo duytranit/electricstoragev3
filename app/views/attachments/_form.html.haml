@@ -1,14 +1,17 @@
 = form_for @attachment do |f|
   - if @attachment.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@attachment.errors.count, "error")} prohibited this attachment from being saved:"
-      %ul
+      %h2
+        = t("views.errors_from_saving")
+      -#%h2= "#{pluralize(@attachment.errors.count, "error")} prohibited this attachment from being saved:"
+      %ol
         - @attachment.errors.full_messages.each do |msg|
           %li= msg
   .field{id: 'project'}
     = f.label :project_id
     = f.text_field :project_id
-  .field
+  .field{id: 'uploading'}
     = f.label :file
     = f.file_field :file
-    = f.submit 'Save'
+  .action
+    = f.submit t("views.save_uploading")
