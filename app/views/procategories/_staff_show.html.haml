@@ -30,12 +30,18 @@
     %li
       - if pc.id == @procategory.id
         = pc.ddc + ' - ' + pc.name
+        >>
+        = link_to t("activerecord.models.project"), projects_path(procategory_id: pc.id)
         %ul
           - pc.children.each do |child|
             %li
               = link_to(child.ddc + ' - ' + child.name, child)
+              >>
+              = link_to t("activerecord.models.project"), projects_path(procategory_id: child.id)
       - else
         = link_to(pc.ddc + ' - ' + pc.name, pc)
+        >>
+        = link_to t("activerecord.models.project"), projects_path(procategory_id: pc.id)
 
   - @father = @procategory.father
   - if @father && @father.variable_ddcs.count > 0

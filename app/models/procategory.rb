@@ -114,6 +114,10 @@ class Procategory < ActiveRecord::Base
     return name
   end
 
+	def projects_user(user)
+		return self.projects.where(["user_id = ?", user.id])
+	end
+
   # def initial_procategory
   #   return Procategory.all.order(ddc: :asc).first
   # end

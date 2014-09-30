@@ -16,10 +16,12 @@
         %a{:href => "http://creativecommons.org/licenses/by/2.5/"} Creative Commons Attribution 2.5 License
   .meta
     %p
-      Filed under
-      %a.category{:href => "http://www.free-css.com/"} Uncategorized
+      = t("activerecord.models.procategory")
+      = link_to truncate(@project.procategory.name, length: 40), @project.procategory
       |
-      %a.comment{:href => "http://www.free-css.com/"} 1 Comment »
+      = link_to 'Edit', edit_project_path(@project)
+      |
+      = link_to 'Back', projects_path
 .post
   %h2.title
     = t("activerecord.models.attachment")
@@ -39,9 +41,3 @@
           = link_to(t("views.destroy"), at, :method => :delete, :data => { :confirm => t("views.confirm") })
         - number += 1
     = paginate @attachments
-  .meta
-    %p
-      Filed under
-      %a.category{:href => "http://www.free-css.com/"} Uncategorized
-      |
-      %a.comment{:href => "http://www.free-css.com/"} 1 Comment »

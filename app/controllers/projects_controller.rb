@@ -4,7 +4,15 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = current_user.projects.page(params[:page]).per(20) if user_signed_in? && current_user.is_staff?
+	  if user_signed_in? && current_user.is_staff?
+			if params[:procategory_id]
+				procategory_id = params[:procategory_id]
+				procategory = Procategory.find(procategory_id)
+				@projects = paginate(procategory.projects_user(current_user))
+			else
+				@projects = paginate(current_user.projects)
+			end
+		end
   end
 
   # GET /projects/1

@@ -18,4 +18,6 @@
   - @procategories.each do |pc|
     %li
       = link_to(pc.ddc + ' - ' + pc.name, pc)
+      >>
+      = link_to t("activerecord.models.project"), projects_path(procategory_id: pc.id)
 = paginate @procategories
