@@ -5,15 +5,17 @@
     = format_date(DateTime.now)
   .story
     %p
-      %img{:alt => "", :height => "140", :src => "../assets/projects.jpg", :width => "470"}/
+      %marquee{behavior: 'slide', direction: 'down', id: 'marquee_panel'}
+        %img{:alt => "", :height => "140", :src => "../assets/projects.jpg", :width => "470"}/
     %p
-      %strong
-        = t("views.project.projects_list")
-      = t("views.project.projects_description", now: format_date(DateTime.now))
+      %marquee{behavior: 'scroll', direction: 'up', id: 'marquee_description', scrollamount: 1}
+        %strong
+          = t("views.project.projects_list")
+        = t("views.project.projects_description", now: format_date(DateTime.now))
   .meta
     %p
       = t("views.project.projects_count")+': '
-      = current_user.active_projects.count
+      = current_user.projects.count
 
 %table.projects-table
   %thead

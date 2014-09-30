@@ -66,6 +66,7 @@ vi:
       projects_description: bao gồm tất cả các dự án đã được bạn tạo ra trước và các thông tin liên quan được cập nhật đến ngày %{now} đã được kiểm duyệt bởi Quản Trị Viên
       projects_count: Tổng số dự án
       edit_project: Chỉnh sửa dự án
+      new_project: Dự án mới
     procategory:
       procategories_list: Danh sách thể loại dự án
       procategories_description: bao gồm tất cả các thể loại hiện có trong hệ thống và đã được kiểm duyệt bởi Quản Trị Viên được cập nhật đến ngày %{now}

@@ -57,6 +57,7 @@ en:
       projects_description: includes all your projects which was created before and related detail information were updated until %{now} and approved by Administrator
       projects_count: Projects count
       edit_project: Editing project
+      new_project: New project
     procategory:
       procategories_list: Categories list
       procategories_description: includes all project categories have been existing on system and approved by Administrator until %{now}
