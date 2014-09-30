@@ -7,21 +7,15 @@
     %p
       = image_tag @project.photo.url(:medium)
     %p
-      %em
-        %strong Baron's Blog
-      is a free template from
-      %strong Free CSS Templates
-      released under a
-      = succeed "." do
-        %a{:href => "http://creativecommons.org/licenses/by/2.5/"} Creative Commons Attribution 2.5 License
+      = @project.description
   .meta
     %p
       = t("activerecord.models.procategory")
       = link_to truncate(@project.procategory.name, length: 40), @project.procategory
       |
-      = link_to 'Edit', edit_project_path(@project)
+      = link_to t("views.edit"), edit_project_path(@project)
       |
-      = link_to 'Back', projects_path
+      = link_to t("views.back"), projects_path
 .post
   %h2.title
     = t("activerecord.models.attachment")

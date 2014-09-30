@@ -1,7 +1,8 @@
-%h1 Editing project
+%h1
+  = t("views.project.edit_project")
 
 = render 'form'
-
-= link_to 'Show', @project
-\|
-= link_to 'Back', projects_path
+.footer_buttons
+  = link_to t("views.show"), @project
+  \|
+  = link_to t("views.back"), projects_path

@@ -9,7 +9,7 @@
     .label
       = f.label :procategory_id
     .content
-      = f.select :procategory_id, options_for_select(Procategory.all.order(:ddc).map{|c| [truncate(c.full_name, length: 50), c.id]})
+      = f.select :procategory_id, options_for_select(Procategory.all.order(:ddc).map{|c| [truncate(c.full_name, length: 50), c.id]}, @project.procategory_id)
   .field
     .label
       = f.label :title
@@ -26,4 +26,4 @@
     .content
       = f.file_field :photo
   .actions
-    = f.submit 'Save'
+    = f.submit t("views.save")

@@ -65,6 +65,7 @@ vi:
       projects_list: Danh sách dự án
       projects_description: bao gồm tất cả các dự án đã được bạn tạo ra trước và các thông tin liên quan được cập nhật đến ngày %{now} đã được kiểm duyệt bởi Quản Trị Viên
       projects_count: Tổng số dự án
+      edit_project: Chỉnh sửa dự án
     procategory:
       procategories_list: Danh sách thể loại dự án
       procategories_description: bao gồm tất cả các thể loại hiện có trong hệ thống và đã được kiểm duyệt bởi Quản Trị Viên được cập nhật đến ngày %{now}
@@ -87,6 +88,8 @@ vi:
     save_uploading: Tải lên
     errors_from_saving: Lỗi trong quá trình lưu
     back: Quay lại
+    edit: Chỉnh sửa
+    show: Xem
 
     pagination:
       first: "&laquo; Trang đầu"

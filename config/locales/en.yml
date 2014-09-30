@@ -56,6 +56,7 @@ en:
       projects_list: Projects list
       projects_description: includes all your projects which was created before and related detail information were updated until %{now} and approved by Administrator
       projects_count: Projects count
+      edit_project: Editing project
     procategory:
       procategories_list: Categories list
       procategories_description: includes all project categories have been existing on system and approved by Administrator until %{now}
@@ -77,3 +78,5 @@ en:
     save_uploading: Upload
     errors_from_saving: Error from saving progressing
     back: Back
+    edit: Edit
+    show: Show
