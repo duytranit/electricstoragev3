@@ -25,6 +25,7 @@ en:
       user: User
       project: Project
       procategory: Category
+      attachment: Attached File
 
     attributes:
       user:
@@ -60,6 +61,8 @@ en:
       procategories_description: includes all project categories have been existing on system and approved by Administrator until %{now}
       procategories_count: Categories count
       new_procategory: New project category
+    attachment:
+      lastest_uploading: Lastest uploading
 
     sign_up: Sign up
     sign_in: Sign in
@@ -69,3 +72,5 @@ en:
     number: N.o
     new: New
     save: Save
+    destroy: Destroy
+    confirm: Are you sure ?

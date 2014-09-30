@@ -23,10 +23,7 @@
       %th.body
         = t("activerecord.models.project")
   %tbody
-    - if params[:page] && Integer(params[:page]) > 1
-      - flag = (Integer(params[:page]) - 1) *20 + 1
-    - else
-      - flag = 1
+    - flag = sequence_number(params[:page], 20)
     - @projects.each do |project|
       %tr{class: cycle('list_line_odd', 'list_line_even')}
         %td.number

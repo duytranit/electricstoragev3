@@ -25,6 +25,7 @@ vi:
       user: Tài khoản
       project: Dự án
       procategory: Thể loại
+      attachment: Tệp Đính Kèm
 
     attributes:
       user:
@@ -60,6 +61,8 @@ vi:
       procategories_description: bao gồm tất cả các thể loại hiện có trong hệ thống và đã được kiểm duyệt bởi Quản Trị Viên được cập nhật đến ngày %{now}
       procategories_count: Tổng số thể loại
       new_procategory: Thể loại dự án mới
+    attachment:
+      lastest_uploading: Lần đăng cuối cùng
 
 
     sign_up: Đăng ký
@@ -70,6 +73,8 @@ vi:
     number: STT
     new: Tạo mới
     save: Lưu
+    destroy: Xóa
+    confirm: Bạn có chắc không ?
 
     pagination:
       first: "&laquo; Trang đầu"

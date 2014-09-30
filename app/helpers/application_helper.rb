@@ -12,4 +12,13 @@ module ApplicationHelper
       return month.to_s + '-' + day.to_s + '-' + year.to_s
     end
   end
+
+	def sequence_number(page, per_page)
+		if page && Integer(page) > 1
+			number = (Integer(page) - 1) * per_page + 1
+		else
+			number = 1
+		end
+		number
+	end
 end

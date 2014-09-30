@@ -21,12 +21,24 @@
       |
       %a.comment{:href => "http://www.free-css.com/"} 1 Comment »
 .post
-  %h2.title Attached Files
-  %h3.posted Posted on January 1st, 2007 by Author
-  .story
-    - @project.attachments.each do |at|
-      %p= at.file_file_name
+  %h2.title
+    = t("activerecord.models.attachment")
+  %h3.posted
+    = t("views.attachment.lastest_uploading") + ':'
+    = format_date(@lastest_attachment.created_at)
   = render "/attachments/form"
+  .story.attachments_story
+    - number = sequence_number(params[:page],2)
+    - @attachments.each do |at|
+      - if at.file_file_name
+        .number
+          = number.to_s + '.'
+        .attachment_name
+          = at.file_file_name + ' (' + (at.file_file_size / 1024).to_s + ' KB' + ')'
+        .action
+          = link_to(t("views.destroy"), at, :method => :delete, :data => { :confirm => t("views.confirm") })
+        - number += 1
+    = paginate @attachments
   .meta
     %p
       Filed under

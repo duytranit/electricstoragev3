@@ -87,3 +87,19 @@
     height: 140px;
   }
 }
+
+.attachments_story{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  .number{
+    float: left;
+    margin-right: 10px;
+  }
+  .attachment_name{
+    float: left;
+  }
+  .action {
+    width: 100%;
+    text-align: right;
+  }
+}

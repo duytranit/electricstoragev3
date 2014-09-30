@@ -10,6 +10,8 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
+		@lastest_attachment = @project.attachments.order(created_at: :asc).last
+		@attachments = paginate(@project.attachments)
 		@attachment = @project.attachments.new
   end
 
@@ -72,5 +74,9 @@ class ProjectsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(:title, :description, :procategory_id, :user_id, :photo)
+    end
+
+    def paginate(projects)
+	    return projects.page(params[:page]).per(2)
     end
 end
