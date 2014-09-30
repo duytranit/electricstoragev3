@@ -5,24 +5,27 @@
     = format_date(DateTime.now)
   .story
     %p
-      %img{:alt => "", :height => "140", :src => "../assets/procategories.jpg", :width => "470"}/
+      %marquee{behavior: 'slide', direction: 'down', id: 'marquee_panel'}
+        %img{:alt => "", :height => "140", :src => "../assets/procategories.jpg", :width => "470"}/
     %p
-      %strong
-        = t("views.procategory.procategories_list")
-      = t("views.procategory.procategories_description", now: format_date(DateTime.now))
+      %marquee{behavior: 'scroll', direction: 'up', id: 'marquee_description', scrollamount: 1}
+        %strong
+          = t("views.procategory.procategories_list")
+        = t("views.procategory.procategories_description", now: format_date(DateTime.now))
   .meta
     %p
       = t("views.procategory.procategories_count")+': '
       = Procategory.all.count
-= link_to '...', procategories_path
-- number = @procategory.family_tree.count - 1
-- while number >= 0
+%marquee{:behavior => "scroll", :direction => "left", scrollamount: 2}
+  = link_to '...', procategories_path
+  - number = @procategory.family_tree.count - 1
+  - while number >= 0
+    >>
+    - pc = @procategory.family_tree[number]
+    = link_to pc.name, pc
+    - number -= 1
   >>
-  - pc = @procategory.family_tree[number]
-  = link_to pc.name, pc
-  - number -= 1
->>
-= @procategory.name
+  = @procategory.name
 .procategory_description
   = @procategory.description
 %ul
