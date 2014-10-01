@@ -5,8 +5,13 @@ class ProcategoriesController < ApplicationController
   # GET /procategories
   # GET /procategories.json
   def index
-		procategory = Procategory.all.order(ddc: :asc).first
-    @procategories = paginate(procategory.cousin)
+		if user_signed_in?
+			procategory = Procategory.all.order(ddc: :asc).first
+			@procategories = paginate(procategory.cousin)
+		else
+			redirect_to projects_path
+		end
+
   end
 
   # GET /procategories/1

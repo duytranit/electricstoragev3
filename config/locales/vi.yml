@@ -92,6 +92,7 @@ vi:
     edit: Chỉnh sửa
     show: Xem
     does_staff_login: Bạn không thể truy cập chức năng này !
+    welcome_to: "Chào mừng đến với %{item}"
 
     pagination:
       first: "&laquo; Trang đầu"
