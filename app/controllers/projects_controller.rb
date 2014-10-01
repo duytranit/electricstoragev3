@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_filter :check_staff_login, only: [:new, :edit, :destroy]
 
   # GET /projects
   # GET /projects.json

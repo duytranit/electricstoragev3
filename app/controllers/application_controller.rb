@@ -14,4 +14,11 @@ class ApplicationController < ActionController::Base
     end
     I18n.locale = cookies[:locale]
   end
+
+  def check_staff_login
+	  if !(user_signed_in? && current_user.is_staff?)
+		  flash[:notice] = t("views.does_staff_login")
+		  redirect_to root_path
+	  end
+  end
 end

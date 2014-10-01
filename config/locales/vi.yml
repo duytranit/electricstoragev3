@@ -91,6 +91,7 @@ vi:
     back: Quay lại
     edit: Chỉnh sửa
     show: Xem
+    does_staff_login: Bạn không thể truy cập chức năng này !
 
     pagination:
       first: "&laquo; Trang đầu"

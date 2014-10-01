@@ -1,5 +1,6 @@
 class ProcategoriesController < ApplicationController
   before_action :set_procategory, only: [:show, :edit, :update, :destroy]
+  before_filter :check_staff_login, only: [:new, :edit, :destroy]
 
   # GET /procategories
   # GET /procategories.json

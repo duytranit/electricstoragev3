@@ -1,5 +1,6 @@
 class AttachmentsController < ApplicationController
   before_action :set_attachment, only: [:show, :edit, :update, :destroy]
+  before_filter :check_staff_login, only: [:new, :edit, :destroy]
 
   # GET /attachments
   # GET /attachments.json
