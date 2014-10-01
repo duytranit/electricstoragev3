@@ -14,5 +14,13 @@ ActiveAdmin.register Project do
   #   permitted
   # end
 
+	index do
+		column :title
+		column t("activerecord.models.procategory") do |p|
+			p.procategory.name
+		end
+		actions
+	end
+
 
 end

@@ -9,8 +9,8 @@
 <body>
 <div id="header">
   <div id="logo">
-    <h1><a href="http://www.free-css.com/">Baron's Blog</a></h1>
-    <h2><a href="http://www.free-css.com/">Free CSS Templates</a></h2>
+    <h1><a href="http://www.free-css.com/">Kho Điện Tử</a></h1>
+    <h2><a href="http://www.free-css.com/">Sở KH&CN Bến Tre</a></h2>
     <table id="languages-choosing-table">
       <tr>
         <td>
@@ -67,21 +67,16 @@
         </ul>
       </li>
       <li>
-        <h2><span>Archives</span></h2>
+        <h2><span><%= t("activerecord.models.procategory") %></span></h2>
         <ul>
-          <li><a href="http://www.free-css.com/">January 2007</a></li>
-          <li><a href="http://www.free-css.com/">December 2006</a></li>
-          <li><a href="http://www.free-css.com/">November 2006</a></li>
-          <li><a href="http://www.free-css.com/">October 2006</a></li>
-          <li><a href="http://www.free-css.com/">September 2006</a></li>
-          <li><a href="http://www.free-css.com/">August 2006</a></li>
-          <li><a href="http://www.free-css.com/">July 2006</a></li>
-          <li><a href="http://www.free-css.com/">June 2006</a></li>
-          <li><a href="http://www.free-css.com/">May 2006</a></li>
-          <li><a href="http://www.free-css.com/">April 2006</a></li>
-          <li><a href="http://www.free-css.com/">March 2006</a></li>
-          <li><a href="http://www.free-css.com/">February 2006</a></li>
-          <li><a href="http://www.free-css.com/">January 2006</a></li>
+          <% Procategory.all.each do |pr| %>
+            <% if pr.level == 0 %>
+              <li class="<%= cycle('list_line_odd', 'list_line_even') %>">
+                <%= link_to truncate(pr.name, length: 25), pr %>
+                <%= ' (' + pr.projects.count.to_s + ')' %>
+              </li>
+            <% end %>
+          <% end %>
         </ul>
       </li>
       <li>
