@@ -44,6 +44,11 @@ en:
         description: Description
         procategory_id: Category
         photo: Photo
+        procategory: Category
+        user: Staff
+        status: Status
+        created_at: Created at
+        updated_at: Updated at
 
   views:
     user:

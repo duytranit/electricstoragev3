@@ -44,6 +44,11 @@ vi:
         description: Miêu tả
         procategory_id: Thể loại
         photo: Hình ảnh
+        procategory: Thể loại
+        user: Nhân viên
+        status: Trạng thái
+        created_at: Ngày tạo
+        updated_at: Ngày chỉnh sửa
       attachment:
         file: Tệp
     errors:
