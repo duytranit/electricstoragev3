@@ -1,11 +1,11 @@
 include UsersHelper
 include ProcategoriesHelper
 ActiveAdmin.register Project do
-
+	menu priority: 1
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :user, :procategory, :title, :description, :status, :photo
+  permit_params :user_id, :procategory_id, :title, :description, :status, :photo
   #
   # or
   #

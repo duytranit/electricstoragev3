@@ -25,7 +25,7 @@ vi:
       user: Tài khoản
       project: Dự án
       procategory: Thể loại
-      attachment: Tệp Đính Kèm
+      attachment: Tệp đính kèm
 
     attributes:
       user:
@@ -39,6 +39,7 @@ vi:
         description: Miêu tả
         ddc: DDC
         status: Trạng thái
+        projects: Dự án
       project:
         title: Tên
         description: Miêu tả
