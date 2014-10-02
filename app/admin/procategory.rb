@@ -28,8 +28,11 @@ ActiveAdmin.register Procategory do
 			row :created_at
 			row :updated_at
 			row :status
-			row :projects do
-				pc.projects.map(&:title).join(" | ")
+			# row :projects do
+			# 	pc.projects.map(&:title).join(" | ")
+			# end
+			row :projects do |pc|
+				pc.projects.each.map(&:title).join(' | ')
 			end
 		end
 
