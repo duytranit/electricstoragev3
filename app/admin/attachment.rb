@@ -1,5 +1,6 @@
-ActiveAdmin.register Procategory do
-	menu priority: 2
+ActiveAdmin.register Attachment do
+	menu priority: 3
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -12,28 +13,20 @@ ActiveAdmin.register Procategory do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-	index do |pc|
-		column :ddc
-		column :name
-		column :status
+	index do
+		column :file_file_name
+		column :file_content_type
+		# column t("activerecord.attributes.attachment.project") do |at|
+		# 	at.project.title
+		# end
+		column :project
 		actions
 	end
 
-	show do |pc|
-		attributes_table do
-			row :id
-			row :ddc
-			row :name
-			row :description
-			row :created_at
-			row :updated_at
-			row :status
-			row :projects do
-				pc.projects.each.map(&:title).join(' | ')
-			end
-		end
-
-	end
+	filter :project
+	filter :file_file_name
+	filter :created_at
+	filter :updated_at
 
 
 end

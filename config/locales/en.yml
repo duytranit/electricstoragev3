@@ -50,6 +50,14 @@ en:
         status: Status
         created_at: Created at
         updated_at: Updated at
+      attachment:
+        file: File
+        project: Project
+        created_at: Created at
+        updated_at: Updated at
+        file_file_name: File name
+        file_content_type: File type
+        file_file_size: File size
 
   views:
     user:

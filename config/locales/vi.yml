@@ -52,6 +52,12 @@ vi:
         updated_at: Ngày chỉnh sửa
       attachment:
         file: Tệp
+        project: Dự án
+        created_at: Ngày tạo
+        updated_at: Ngày chỉnh sửa
+        file_file_name: Tên tệp
+        file_content_type: Loại tệp
+        file_file_size: Dung lượng
     errors:
       format: ! '%{attribute} %{message}'
       models:

@@ -21,7 +21,7 @@
     = t("activerecord.models.attachment")
   %h3.posted
     = t("views.attachment.lastest_uploading") + ':'
-    = format_date(@lastest_attachment.created_at)
+    = format_date(@lastest_attachment.created_at) if @lastest_attachment
   = render "/attachments/form"
   .story.attachments_story
     - number = sequence_number(params[:page],2)
