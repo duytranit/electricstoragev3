@@ -16,9 +16,6 @@ ActiveAdmin.register Attachment do
 	index do
 		column :file_file_name
 		column :file_content_type
-		# column t("activerecord.attributes.attachment.project") do |at|
-		# 	at.project.title
-		# end
 		column :project
 		actions
 	end
@@ -27,6 +24,26 @@ ActiveAdmin.register Attachment do
 	filter :file_file_name
 	filter :created_at
 	filter :updated_at
+
+	form do |f|
+		f.inputs do
+			f.input :project, as: :select, collection: Project.all.map {|p|[p.title, p.id]}
+			f.input :file, as: :file
+		end
+		f.actions
+	end
+
+	show do |at|
+		attributes_table do
+			row :id
+			row :project
+			row :created_at
+			row :updated_at
+			row :file_file_name
+			row :file_content_type
+			row :file_file_size
+		end
+	end
 
 
 end
