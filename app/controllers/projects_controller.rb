@@ -13,6 +13,8 @@ class ProjectsController < ApplicationController
 			else
 				@projects = paginate(current_user.projects)
 			end
+	  else
+			@projects = Project.all
 		end
   end
 

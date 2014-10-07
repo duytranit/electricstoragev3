@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :items
+
+  resources :invoices
+
   resources :attachments
 
   resources :procategories

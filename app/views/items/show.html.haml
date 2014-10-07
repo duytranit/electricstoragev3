@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Invoice:
+  = @item.invoice_id
+%p
+  %b Project:
+  = @item.project_id
+
+= link_to 'Edit', edit_item_path(@item)
+\|
+= link_to 'Back', items_path

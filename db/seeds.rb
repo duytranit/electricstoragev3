@@ -589,3 +589,20 @@ Procategory.create(
 		ddc: '990',
 		status: true
 )
+
+user = User.where(["role = ?", 'staff']).first
+procategory = Procategory.all.first
+Project.create(
+		title: 'Dịch hại mới gây hại trên cây dừa',
+		description: 'Do ảnh hưởng của biến đổi khí hậu, tình hình thời tiết ngày càng diễn biến phức tạp, các loài dịch hại trong hệ sinh thái cũng diễn biến khôn lường đó cũng là hệ quả điển hình. Trong nhiều năm qua, nông dân trồng dừa đã phải “điêu đứng” với bọ cánh cứng hại dừa. Đầu năm 2012 2012	xuất hiện bọ vòi voi gây hại đã làm lo lắng không ít cho người trồng dừa. Hiện nay cán bộ kỹ thuật bảo vệ thực vật mới phát hiện một loài nhện phá hại trên bông dừa và sâu đục trái dừa đã gây rụng trái hàng loạt. Vì thế, nhà vườn cần chú ý theo dõi phát hiện và báo cho cán bộ chuyên ngành ở địa phương, xác định vùng bị nhiễm và có biện pháp quản lý. Bọ vòi voi đã được định danh, có tên khoa học là Diocalandra frumenti thuộc bộ Coleoptera, họ Curculionidae. Trưởng thành vòi voi là côn trùng bộ cánh cứng màu nâu đen. Trưởng thành sợ ánh sáng, hoạt động mạnh lúc chiều tối, chúng sống ở nơi tiếp xúc giữa hai trái hoặc gần cuống trái. Chiều dài con trưởng thành khoảng 7-8 mm, chiều ngang khoảng 1.5 mm. Âu trùng màu vàng lợt, sống bằng cách đục',
+    user: user,
+		procategory: procategory,
+    status: true
+)
+Project.create(
+		title: 'Biện pháp phòng trừ sâu đục trái hiệu quả của nông dân tổ hợp tác sản xuất bưởi Da Xanh Phú Thành',
+    description: 'Tại Bến Tre, hiện có trên 4.0	hecta bưởi da xanh. Gần đây, sâu đục trái đã xuất hiện trên nhiều vườn bưởi da xanh của nông dân và làm ảnh hưởng không nhỏ đến hiệu quả kinh tế của bà con. Do chưa có loại thuốc nào nằm trong danh mục thuốc bảo vệ thực vật Việt Nam đặc trị hiệu quả nên hiện nay nông dân đang lúng túng trong việc phòng trừ sâu đục trái bưởi. Nhiều nhà vườn ở Tổ hợp tác sản xuất bưởi da xanh vietGAP Phú Thành, xã Quới Sơn, huyện Châu Thành, sâu đục trái bưởi cũng đã xuất hiện trong vườn bưởi của bà con. Từ thực tế này, cán bộ kỹ thuật của Trung tâm Khuyến nông - Khuyến ngư tỉnh Bến Tre đã đến hướng dẫn nông dân các biện pháp phòng trừ tạm thời để hạn chế sâu đục trái bùng phát, lây lan trên diện rộng, trong đó có biện pháp treo long não, phun bột tỏi cho vườn bưởi, nuôi kiến vàng, tỉa cành cho vườn thông thoáng. Cách nay 3 tháng, vườn bưởi da xanh của ông Nguyễn Văn So, ở ấp Quới Hòa Tây, xã Quới Sơn, tổ viên THT sản xuất bưởi da xanh vietGAP Phú Thành bị sâu đục trái tấn công làm ông rất lo lắng.',
+		user: user,
+		procategory: procategory,
+    status: true
+)

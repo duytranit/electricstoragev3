@@ -11,10 +11,12 @@ ActiveAdmin.register_page "Dashboard" do
     # end
 
     table_for Project.all.limit(5) do
-	    column :title do |p|
+	    column t("activerecord.attributes.project.title") do |p|
 		    link_to p.title, [:admin, p]
 	    end
-	    column :procategory
+	    column t("activerecord.attributes.project.procategory") do |p|
+		    link_to p.procategory.name
+	    end
     end
     strong { link_to "View all projects", admin_projects_path }
     # Here is an example of a simple dashboard with columns and panels.
