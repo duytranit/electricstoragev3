@@ -67,6 +67,9 @@ vi:
               blank: chưa được chọn
 
   views:
+    menu:
+      customer:
+        storage: "Đã chọn %{count} dự án"
     user:
       forgot_password: Quên mật khẩu
       customer: Khách hàng

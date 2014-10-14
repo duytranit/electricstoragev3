@@ -60,6 +60,11 @@ en:
         file_file_size: File size
 
   views:
+    menu:
+      customer:
+        storage:
+          one: "Chose %{count} project"
+          other: "Chose %{count} projects"
     user:
       forgot_password: Forgot password
       customer: Customer
