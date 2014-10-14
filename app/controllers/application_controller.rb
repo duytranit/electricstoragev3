@@ -21,4 +21,8 @@ class ApplicationController < ActionController::Base
 		  redirect_to root_path
 	  end
   end
+
+  def add_project_to_cart(project_id)
+	  (session[:storage] ||= []) << project_id
+  end
 end

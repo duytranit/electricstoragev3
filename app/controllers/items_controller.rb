@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-	  (session[:storage] ||= []) << params[:project_id]
+	  add_project_to_cart(params[:project_id])
 	  redirect_to root_path
     # @item = Item.new(item_params)
     #

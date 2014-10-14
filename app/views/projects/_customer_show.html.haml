@@ -11,4 +11,5 @@
         = link_to image_tag(!project.photo.url(:thumb)), @project
     %p
       = @project.description
-= link_to("Buy", items_path(project_id: @project.id), method: :post)
+- if !project_be_bought(@project.id)
+  = link_to("Buy", items_path(project_id: @project.id), method: :post)
