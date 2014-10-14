@@ -24,8 +24,19 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-	  add_project_to_cart(params[:project_id])
-	  redirect_to root_path
+		@cart = current_cart(current_user.id)
+		project = Project.find(params[:project_id])
+		@item = @cart.items.build
+		@item.project = project
+		respond_to do |format|
+			if @item.save
+				format.html {redirect_to @root_path, notice: 'Project was successfully add to cart'}
+				format.json { render :show, status: :created, location: @item }
+			end
+		end
+
+	  # add_project_to_cart(params[:project_id])
+	  # redirect_to root_path
     # @item = Item.new(item_params)
     #
     # respond_to do |format|

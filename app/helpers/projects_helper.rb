@@ -1,16 +1,13 @@
 module ProjectsHelper
-	def project_be_bought(project_id)
-		if session[:storage]
-			flag = false
-			session[:storage].each do |id|
-				if id == project_id.to_s()
-					flag = true
-					break
-				end
+	def project_be_bought(project_id, customer_id)
+		@cart = current_cart(customer_id)
+		flag = false
+		@cart.items.each do |item|
+			if item.project.id == project_id
+				flag = true
+				break
 			end
-			return flag
-		else
-			return false
 		end
+		return flag
 	end
 end
