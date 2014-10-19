@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-	include ApplicationHelper
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -25,5 +24,12 @@ class ApplicationController < ActionController::Base
 
   def add_project_to_cart(project_id)
 	  (session[:storage] ||= []) << project_id
+  end
+
+  def current_cart(customer_id)
+    customer = User.find(customer_id)
+    invoice = Invoice.where(["user_id = ? and payment = ''", customer_id]).first
+    invoice = customer.invoices.create if !invoice
+    return invoice
   end
 end

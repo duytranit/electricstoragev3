@@ -21,11 +21,4 @@ module ApplicationHelper
 		end
 		number
 	end
-
-  def current_cart(customer_id)
-	  customer = User.find(customer_id)
-	  invoice = Invoice.where(["user_id = ? and payment = ''", customer_id])
-	  invoice = customer.invoices.create if !invoice
-	  return invoice
-  end
 end

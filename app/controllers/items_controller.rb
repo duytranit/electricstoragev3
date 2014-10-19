@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
 		@item.project = project
 		respond_to do |format|
 			if @item.save
-				format.html {redirect_to @root_path, notice: 'Project was successfully add to cart'}
+				format.html {redirect_to root_path, notice: 'Project was successfully add to cart'}
 				format.json { render :show, status: :created, location: @item }
 			end
 		end
