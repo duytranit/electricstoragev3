@@ -10,4 +10,5 @@
       %a{:href => "http://www.free-css.com/"} Contact Me
     - if (user_signed_in? && !current_user.is_staff?)
       %li
-        %a Storage
+        - current_cart = current_cart(current_user.id)
+        = link_to t("views.menu.customer.storage", count: current_cart.items.count), current_cart
