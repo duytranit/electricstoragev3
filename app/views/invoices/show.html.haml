@@ -1,9 +1,19 @@
-%p#notice= notice
-
-%p
-  %b User:
-  = @invoice.user_id
-
-= link_to 'Edit', edit_invoice_path(@invoice)
-\|
-= link_to 'Back', invoices_path
+.post
+  %h2.title
+    = t("activerecord.models.cart")
+    (
+    = link_to t("views.destroy"), @invoice, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    )
+  %h3.posted
+    = format_date(@invoice.created_at)
+  .story
+    %p
+      %marquee{behavior: 'slide', direction: 'down', id: 'marquee_panel'}
+        %img{:alt => "", :height => "140", :src => "../assets/virtualCart.jpg", :width => "470"}/
+    %p
+      %ol
+        - @invoice.items.each do |item|
+          %li
+            = link_to item.project.title, item.project
+            >>
+            = link_to t("views.destroy"), item, :method => :delete, :data => { :confirm => 'Are you sure?' }

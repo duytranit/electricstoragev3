@@ -26,6 +26,8 @@ vi:
       project: Dự án
       procategory: Thể loại
       attachment: Tệp đính kèm
+      invoice: Hóa đơn
+      cart: Giỏ hàng
 
     attributes:
       user:

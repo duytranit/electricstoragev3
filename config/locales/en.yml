@@ -26,6 +26,8 @@ en:
       project: Project
       procategory: Category
       attachment: Attached File
+      invoice: Invoice
+      cart: Cart
 
     attributes:
       user:
