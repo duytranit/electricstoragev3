@@ -38,12 +38,19 @@
     <ul>
       <li>
         <h2><span>Search</span></h2>
-        <form method="get" action="http://www.free-css.com/">
-          <div>
-            <input type="text" id="textfield1" name="textfield1" value="" size="18" />
-            <input type="submit" id="submit1" name="submit1" value="Search" />
-          </div>
-        </form>
+          <%= form_tag projects_path, method: :get do %>
+            <table style="width: 100%">
+              <tr>
+                <td>
+                  <%= text_field_tag :title, params[:title], placeholder: t("activerecord.attributes.project.title"), id: 'txtSearch'%>
+                  <%= select_tag :procategory_id, options_from_collection_for_select(Procategory.all, :id, :name, params[:procategory_id]), prompt: t("activerecord.attributes.project.procategory"), id: 'ddlSearch' %>
+                <td>
+                <td>
+                  <%= submit_tag t("views.search"), id: 'btSearch'%>
+                </td>
+              </tr>
+            </table>
+          <% end %>
       </li>
       <li>
         <h2><span>Sign in</span></h2>

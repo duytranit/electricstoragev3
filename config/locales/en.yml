@@ -104,3 +104,4 @@ en:
     show: Show
     does_staff_login: You cannot access this function !
     welcome_to: "Welcome to %{item}"
+    search: Search

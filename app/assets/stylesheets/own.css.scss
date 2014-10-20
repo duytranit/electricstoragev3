@@ -167,3 +167,25 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+#colTwo #txtSearch {
+  width: 100px;
+}
+
+#colTwo #ddlSearch {
+  width: 100px;
+}
+
+#btSearch{
+  background: #EFF0EB url(../assets/img2.gif) repeat-x;
+  border: 1px solid #C9CCB9;
+  color: #878C66;
+  width: 65px;
+  height: 30px;
+  font-size: 11px;
+}
+
+#btSearch:hover{
+  font-weight: bold;
+  background: #EFF0EB;
+}

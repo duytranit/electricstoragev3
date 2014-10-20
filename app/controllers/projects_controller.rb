@@ -5,6 +5,15 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
+	  # if params[:title] || params[:description] || params[:procategory_id] || params[:min_price] || params[:max_price]
+		 #  @projects = Project.search(params[:title], params[:description], params[:min_price], params[:max_price], params[:procategory_id]).joins(:procategory).where(["projects.share = ? and projects.status = ?
+  	# 	and procategories.status = ? ", true, true, true])
+		 #  flash[:notice] = "There are " + @projects.count.to_s + " projects"
+		 #  @projects = @projects.page(params[:page]).per(2)
+	  # else
+		 #  @projects = Project.joins(:procategory).where(["projects.share = ? and projects.status = ? and procategories.status = ? ", true, true, true]).page(params[:page]).per(2)
+	  # end
+
 	  if user_signed_in? && current_user.is_staff?
 			if params[:procategory_id]
 				procategory_id = params[:procategory_id]
