@@ -21,4 +21,14 @@ class Project < ActiveRecord::Base
     return flag
   end
 
+  def self.search(title, description, procategory_id)
+	  title = title.downcase if title
+	  description = description.downcase if description
+	  if procategory_id != ''
+		  self.where(["LOWER(projects.title) LIKE ? and LOWER(projects.description) LIKE ? and projects.procategory_id = ?", "%#{title}%", "%#{description}%", procategory_id])
+	  else
+		  self.where(["LOWER(projects.title) LIKE ? and LOWER(projects.description) LIKE ?", "%#{title}%", "%#{description}%"])
+	  end
+  end
+
 end
