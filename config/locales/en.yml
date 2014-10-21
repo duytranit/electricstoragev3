@@ -67,6 +67,7 @@ en:
         storage:
           one: "Chose %{count} project"
           other: "Chose %{count} projects"
+        about: About me
     user:
       forgot_password: Forgot password
       customer: Customer
